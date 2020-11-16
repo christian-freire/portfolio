@@ -33,6 +33,16 @@
     right: 16rem;
 }
 
+.show-menu .hamburguer:hover{
+    width: 34px;
+    height: 34px;
+}
+
+.hamburguer:hover{
+    width: 34px;
+    height: 34px;
+}
+
 .line{
     width: 100%;
     background-color: #ffffff;
@@ -119,10 +129,12 @@ header{
     border-radius: 5px;
     cursor: pointer;
     animation: moveBanner 1s 0.9s forwards;
+    transition: all 0.5s;
 }
 
 .banner button:hover{
     color: rgb(226, 188, 82);
+    padding: 17px 33px;
 }
 
 @keyframes moveBanner{
