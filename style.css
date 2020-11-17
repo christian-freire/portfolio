@@ -54,6 +54,7 @@
     background-color: black;
     box-shadow: none;
 }
+
 header{
     width: 100%;
     height: 100vh;
@@ -65,8 +66,8 @@ header{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s;
 }
 
 .img-wrapper img{
@@ -75,6 +76,10 @@ header{
     object-fit: cover;
     opacity: 0.5;
     animation: zoom 25s;
+}
+
+.show-menu .img-wrapper{
+    background-color: rgba(0, 0, 0, 1);
 }
 
 @keyframes zoom{
@@ -102,6 +107,7 @@ header{
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 1s 0.7s forwards;
+    transition: all 0.5s;
 }
 
 .banner p{
@@ -113,12 +119,13 @@ header{
     line-height: 3.5rem;
     margin-bottom: 2rem;
     animation: moveBanner 1s 0.8s forwards;
+    transition: all 0.5s;
 }
 
 .banner button{
     font-family: var(--font-action);
     color: white;
-    opacity: 0;
+    opacity: 1;
     text-transform: uppercase;
     letter-spacing: .1rem;
     background: #6a3093;
@@ -132,9 +139,21 @@ header{
     transition: all 0.5s;
 }
 
-.banner button:hover{
-    color: rgb(226, 188, 82);
+.banner button:hover{ 
     padding: 17px 33px;
+}
+
+.show-menu .banner h1{
+    color: rgb(87, 87, 87);
+}
+
+.show-menu .banner p{
+    color: rgb(87, 87, 87);
+}
+
+.show-menu .banner button{
+    background: #230c3d;
+    color:  rgb(87, 87, 87);
 }
 
 @keyframes moveBanner{
